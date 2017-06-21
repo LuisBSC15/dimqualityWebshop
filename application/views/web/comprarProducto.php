@@ -1,80 +1,162 @@
-<!DOCTYPE html> 
-<html>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<script type="text/javascript" src="<?php echo base_url("public/js/jQuery-3.2.1.min.js"); ?>"></script>
-<script type="text/javascript" src="<?php echo base_url("public/js/bootstrap.js"); ?>"></script>
-<head>
-	<meta charset="utf-8" />
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style type="text/css">
-  		.pos {float:left;}
-	</style>
-</head>
-<body>
-	<div class='container'>
+<div class='container'>
     <div class="row">
       <div class="col-md-12">
-          <h1>Carrito de compras-----------------------------------------------------</h1>
+          <h1>Comprar Productos</h1>
       </div>
     </div>
     <div class="row">
-      <div class>
-	  <div class="pos" id="imagen1">
-		<img src="https://s3.amazonaws.com/poderpda/2016/09/Xperia-XZ_forestBlue.png" WIDTH=320 HEIGHT=240> 
-	  </div class="pos"
-          <div class="pos">
-            <h4>Xperia XZ</h4>
-            <div class="pos">
-                <label for="precio">Precio 
-			<input name="precio" placeholder="$600" readonly="readonly"/>
-		</label><br></br>
-                <label for="stock">Stock 
-			<input name="stock" placeholder="103" readonly="readonly"/>
-		</label><br></br>
-                <label for="caracteristicas">Caracteristicas </label><br></br>		
-                <input type="caracteristica1" name="caracteristica1" placeholder="Pantalla 5.5 Pulgadas 4K Resolucion 3840 x 2160 pixels" size="50" readonly="readonly"/><br></br>
-		<input type="caracteristica2" name="caracteristica2" placeholder="Android 7.0 Nougat" size="50" readonly="readonly"/><br></br>
-		<b><a href="url"> Mas informacion </a></b> 
-		</div class="pos">
-		<div class="pos">
-		
-          </div>
-	<div align="center">
-		<label for="cantidad">Cantidad 
-			<input name="cantidad" placeholder="1" readonly="readonly" size="2"/>
-		</label>
-		<button class="eliminar"><i class="material-icons">delete</i></button>
+      <div class="container form-group">
+        <form action="<?php echo base_url('usuario/comprarProducto') ?>" method="POST">
+          <div class="container">
+            <h4>Carrito de Compras</h4>
+            <div class="col-md-10 col-md-offset-1 well">
+				<div class="row">
+					<div class="col-md-2">
+						<img class="img-responsive" src="https://s3.amazonaws.com/poderpda/2016/09/Xperia-XZ_forestBlue.png" WIDTH=320 HEIGHT=240>
+					</div>
+					<div class="col-md-5">
+						<h5>Xperia XZ</h5>
+						<p>
+							El Xperia XZ trae una cámara trasera de 23 megapixeles con una apertura de f/2.0, láser de enfoque automático, flash y un nuevo sensor RGBC que promete colores más naturales y a obtener mejores resultados en situaciones con poca luz.
+						</p>
+						<a href="url"> Mas informacion..</a>
+					</div>
+					<div class="col-md-2">
+						<div class="row">
+							<div class="col-md-12">
+								Precio
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								$ 600
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="row">
+							<div class="col-md-12">
+								Cantidad
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<input type="number" step="1" value="1">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="row">
+							<div class="col-md-12">
+								Quitar
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<button class="eliminar"><i class="material-icons">delete</i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+          
 
-	</div>
+	  <div class="col-md-10 col-md-offset-1 well">
+				<div class="row">
+					<div class="col-md-2">
+						<img class="img-responsive" src="http://www.lg.com/es/images/gnb-global/es_gnb_he_003.png" WIDTH=320 HEIGHT=240>
+					</div>
+					<div class="col-md-5">
+						<h5>LG OLED 4K (65pulg)</h5>
+						<p>
+							MÁS NEGRO: Debido a la ausencia de retroiluminación obtendrás el único negro puro imposible de conseguir en otras tecnologíasMÁS COLOR: No hay colores como los de OLED. Tiene el 100% de espacio DCI-P3MÁS RÁPIDO: Es 1000 veces más rápido generando imágenesMÁS HDR, HDRx5: El único compatible con 100% HDR (Dolby Vision, HDR10, HLG, Technicolor, HDR Converter)MÁS ENVOLVENTE: El único TV con sonido Dolby Atmos . El sonido se mueve 360º alrededor de tiMÁS SEGURO: Tiene el Smart TV más fácil, rápido y seguro. WebOS 3.5.
+						</p>
+						<a href="url"> Mas informacion..</a>
+					</div>
+					<div class="col-md-2">
+						<div class="row">
+							<div class="col-md-12">
+								Precio
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								$ 7794
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="row">
+							<div class="col-md-12">
+								Cantidad
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<input type="number" step="1" value="1">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="row">
+							<div class="col-md-12">
+								Quitar
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<button class="eliminar"><i class="material-icons">delete</i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+          </div>
+	  <div class="col-md-6">
+				<div class="row">
+					<h4>Datos de la entrega</h4>
+					<div class="col-md-6">
+						<div class="row">
+								<input type="radio" name="entrega" value="retiro" checked="checked">Retiro en Local
+						</div>
+						<div class="row">
+								<input type="radio" name="entrega" value=domicilio">Entrega a Domicilio
+						</div>
+					</div>
+				</div>
+				
+          </div>
+	  <div class="col-md-6">
+				<div class="row">
+					<h4>Forma de Pago</h4>
+					<div class="col-md-6">
+						<div class="row">
+								<input type="radio" name="pago" value="Deposito" checked="checked">Deposito 
+						</div>
+						<div class="row">
+								<input type="radio" name="pago" value="Transferencia">Transferencia
+						</div>
+					</div>
+				</div>
+				
+          </div>
+
+	  	
+		<p>
+			Posterior a la compra, nos pondremos en contacto con usted para concretar la transacción. Deberá enviar pruebas (foto o captura de pantalla del comprobante) que respalden el pago realizado para efectuar la compra.
+		</p>
+				
+          	  
+	  
+          <div class="form-group">
+            <input class="btn btn-primary" name="submit" type="submit" value="Proceder"/>
+          </div>	
+        </form>
+      </div>
+
   </div>
 </div>
-<div><br><br>
-	<h2> Total </h2> <input type="total" name="total" placeholder="$600" size="5" readonly="readonly"/>
-	</div>
-<div><br><br>
-	<h3> Datos de la entrega </h2>
-	<form action="">
-	<input type="radio" name="entrega" value="retiro" checked="checked">Retiro en Local 
-	<input type="radio" name="entrega" value=domicilio">Entrega a Domicilio
-	</form>
-</div>
-
-<div><br><br>
-	<h3> Forma de Pago </h2>
-	<form>
-	<input type="radio" name="pago" value="Deposito" checked="checked">Deposito 
-	<input type="radio" name="pago" value="Transferencia">Transferencia
-	<form>
-</div>
-
-<div> <br><br>
-	<b> Posterior a la compra, nos pondremos en contacto con usted para concretar la transacción.
-Deberá enviar pruebas (foto o captura de pantalla del comprobante) que respalden el pago realizado para efectuar la compra </b>
-<div>
-
-<br><input class="btn btn-primary" type="submit" name="proceder" value="Proceder" /> </input class="pos"> 
-
-</body>
-</html>
+<script type="text/javascript" src="<?php echo base_url("public/js/jQuery-3.2.1.min.js"); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url("public/js/bootstrap.js"); ?>"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
