@@ -13,31 +13,20 @@ class comprarProducto extends CI_Controller {
         date_default_timezone_set("America/Guayaquil");
 	}
 
-  public function index()
-  {
-      $titulo = "Dimquality::Admin - Inicio";
-      $dataHeader['titlePage'] = $titulo;
-      
-      $this->load->view('admin/header', $dataHeader);
-      $this->load->view('comprarProducto');
-      $this->load->view('admin/footer');
-  }
 
   public function comprarProducto(){
+    $titulo = "Dimquality::Admin - Compra Producto";
+    $dataHeader['titlePage'] = $titulo;
+    $this->load->view('web/header', $dataHeader);
+    $this->load->view('web/comprarProducto');
+    $this->load->view('web/footer');
 
-      if($this->form_validation->run() == true){
-          $this->session->set_userdata('success_msg', 'Tu compra se ha realizado con éxito, por favor revise su e-mail'); 
-          redirect('user/catalogo');
+    if($this->form_validation->run() == true){
+          $this->session->set_userdata('mensaje_exito', 'Tu compra se ha realizado con éxito, por favor revise su e-mail'); 
+          redirect('web/catalogo');
         }else{
-          $data['error_msg'] = 'Ha ocurrido un problema, intente más tarde';
+          $data['mensaje_error'] = 'Ha ocurrido un problema, intente más tarde';
         }
     }
     $data['user'] = $userData;
-        //load the view    
-    $titulo = "Dimquality::Admin - Usuarios";
-    $dataHeader['titlePage'] = $titulo;
-    $this->load->view('admin/header', $dataHeader);
-    $this->load->view('comprarProducto', $data);
-    $this->load->view('admin/footer');
-
  }
