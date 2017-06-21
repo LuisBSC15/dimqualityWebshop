@@ -48,4 +48,21 @@ class Web extends CI_Controller {
      $this->load->view('web/indexUser');
      $this->load->view('web/footer');
   }
+	
+    public function comprarProducto()
+  {
+	/*if($this->form_validation->run() == true){
+          $this->session->set_userdata('mensaje_exito', 'Tu compra se ha realizado con éxito, por favor revise su e-mail'); 
+          redirect('web/catalogo');
+        }else{
+          $data['mensaje_error'] = 'Ha ocurrido un problema, intente más tarde';
+        }
+    }*/
+	  
+    $titulo = "Dimquality::Admin - Compra Producto";
+    $dataHeader['titlePage'] = $titulo;
+    $this->load->view('web/header', $dataHeader);
+    $this->load->view('web/comprarProducto');
+    $this->load->view('web/footer');
+  }
 }
